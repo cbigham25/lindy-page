@@ -1,35 +1,36 @@
-import React, { Component } from "react";
+import React from "react";
 import {
     Route,
     NavLink,
-    HashRouter
+    HashRouter,
+    Routes
 } from "react-router-dom";
 import About from "./About";
 import Books from "./Books";
 import Home from "./Home";
 
-
-class Main extends Component {
-    render() {
-        return (
-            <HashRouter>
-                <div>
-                    <h1>Simple SPA</h1>
-                    <ul className="header">
-                        <li><NavLink to="/">Home</NavLink></li>
+function Main() {
+    return (
+        <HashRouter>
+            <div>
+                <div className="header-container">
+                    <h1><NavLink to="/">M. J. Lindemann</NavLink></h1>
+                    <ul className="navbar">
                         <li><NavLink to="/books">Books</NavLink></li>
                         <li><NavLink to="/about">About</NavLink></li>
                         <li><a href="link to lindys BlogSpot">Blog</a></li>
                     </ul>
-                    <div className="content">
-                        <Route path="/" component={Home} />
-                        <Route path="/books" component={Books} />
-                        <Route path="/about" component={About} />
-                    </div>
                 </div>
-            </HashRouter>
-        );
-    }
+                <div className="content">
+                    <Routes>
+                        <Route exact path="/" element={<Home />} />
+                        <Route path="/books" element={<Books />} />
+                        <Route path="/about" element={<About />} />
+                    </Routes>
+                </div>
+            </div>
+        </HashRouter>
+    );
 }
 
 export default Main;
