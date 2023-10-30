@@ -11,6 +11,7 @@ class Home extends Component {
                     <button type="submit">Submit</button>
                 </form>
             </div>
+
         );
     }
 }

@@ -21,12 +21,19 @@ function Main() {
                         <li><a href="link to lindys BlogSpot">Blog</a></li>
                     </ul>
                 </div>
-                <div className="content">
-                    <Routes>
-                        <Route exact path="/" element={<Home />} />
-                        <Route path="/books" element={<Books />} />
-                        <Route path="/about" element={<About />} />
-                    </Routes>
+                <div className="content-container">
+                    <div className="placeholder-content">
+                        <div className="content">
+                            <Routes>
+                                <Route exact path="/" element={<Home />} />
+                                <Route path="/books" element={<Books />} />
+                                <Route path="/about" element={<About />} />
+                            </Routes>
+                        </div>
+                    </div>
+                </div>
+                <div className="footer-container">
+                    <div className="footer"></div>
                 </div>
             </div>
         </HashRouter>
