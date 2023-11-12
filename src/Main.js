@@ -2,7 +2,7 @@ import React from "react";
 import {
     Route,
     NavLink,
-    HashRouter,
+    BrowserRouter as Router,
     Routes
 } from "react-router-dom";
 import About from "./About";
@@ -11,33 +11,70 @@ import Home from "./Home";
 
 function Main() {
     return (
-        <HashRouter>
+        <Router>
             <div>
                 <div className="header-container">
                     <h1><NavLink to="/">M. J. Lindemann</NavLink></h1>
                     <ul className="navbar">
                         <li><NavLink to="/books">Books</NavLink></li>
                         <li><NavLink to="/about">About</NavLink></li>
-                        <li><a href="link to lindys BlogSpot">Blog</a></li>
+                        <li><a href="link to Lindy's BlogSpot">Blog</a></li>
                     </ul>
                 </div>
-                <div className="content-container">
-                    <div className="placeholder-content">
-                        <div className="content">
-                            <Routes>
-                                <Route exact path="/" element={<Home />} />
-                                <Route path="/books" element={<Books />} />
-                                <Route path="/about" element={<About />} />
-                            </Routes>
-                        </div>
-                    </div>
+                <div className="content">
+                    <Routes>
+                        <Route
+                            exact
+                            path="/"
+                            element={
+                                <HomeContainer>
+                                    <Home />
+                                </HomeContainer>
+                            }
+                        />
+                        <Route
+                            path="/books"
+                            element={
+                                <BooksContainer>
+                                    <Books />
+                                </BooksContainer>
+                            }
+                        />
+                        <Route
+                            path="/about"
+                            element={
+                                <AboutContainer>
+                                    <About />
+                                </AboutContainer>
+                            }
+                        />
+                    </Routes>
                 </div>
                 <div className="footer-container">
                     <div className="footer"></div>
                 </div>
             </div>
-        </HashRouter>
+        </Router>
     );
 }
+
+// Define container components for each route
+const HomeContainer = ({ children }) => (
+    <div className="content-container-home">
+        {children}
+    </div>
+);
+
+const BooksContainer = ({ children }) => (
+    <div className="content-container-books">
+        {children}
+    </div>
+);
+
+const AboutContainer = ({ children }) => (
+    <div className="content-container-about">
+        {children}
+    </div>
+);
 
 export default Main;
