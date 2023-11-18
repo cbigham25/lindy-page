@@ -4,12 +4,18 @@ class Books extends Component {
     render() {
         return (
             <section aria-label="Book Gallery">
-                <div class="carousel">
-                    <button class="carousel-button prev"></button>
-                    <button class="carousel-button next"></button>
+                <div className="carousel">
+                    <button className="carousel-button prev"></button>
+                    <button className="carousel-button next"></button>
                     <ul>
-                        <li class="slide">
-                            <img src="assets/placeholder-1.jpg"></img>
+                        <li className="slide">
+                            <img src={require('./assets/placeholder-1.jpg')} alt="Book cover 1"></img>
+                        </li>
+                        <li className="slide">
+                            <img src={require('./assets/placeholder-2.jpg')} alt="Book cover 1"></img>
+                        </li>
+                        <li className="slide">
+                            <img src={require('./assets/placeholder-3.jpg')} alt="Book cover 1"></img>
                         </li>
                     </ul>
                 </div>
