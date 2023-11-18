@@ -3,20 +3,17 @@ import React, { Component } from "react";
 class Books extends Component {
     render() {
         return (
-            <div>
-                <div>
-                    <img src="image1.jpg" alt="Image 1" />
-                    <p>Paragraph for Image 1</p>
+            <section aria-label="Book Gallery">
+                <div class="carousel">
+                    <button class="carousel-button prev"></button>
+                    <button class="carousel-button next"></button>
+                    <ul>
+                        <li class="slide">
+                            <img src="assets/placeholder-1.jpg"></img>
+                        </li>
+                    </ul>
                 </div>
-                <div>
-                    <img src="image2.jpg" alt="Image 2" />
-                    <p>Paragraph for Image 2</p>
-                </div>
-                <div>
-                    <img src="image3.jpg" alt="Image 3" />
-                    <p>Paragraph for Image 3</p>
-                </div>
-            </div>
+            </section>
         );
     }
 }

@@ -18,7 +18,7 @@ function Main() {
                     <ul className="navbar">
                         <li><NavLink to="/books">Books</NavLink></li>
                         <li><NavLink to="/about">About</NavLink></li>
-                        <li><a href="link to Lindy's BlogSpot">Blog</a></li>
+                        <li><a href="https://mjlindemann.blogspot.com/">Blog</a></li>
                     </ul>
                 </div>
                 <div className="content">
