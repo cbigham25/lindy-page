@@ -6,8 +6,14 @@ import {
     Routes
 } from "react-router-dom";
 import About from "./About";
-import Books from "./Books";
 import Home from "./Home";
+import ImageSlider from "./ImageSlider.tsx";
+import book1 from "./assets/placeholder-1.jpg"
+import book2 from "./assets/placeholder-2.jpg"
+import book3 from "./assets/placeholder-3.jpg"
+
+const IMAGES = [book1, book2, book3]
+const IMAGE_DESCRIPTIONS = ["Description of Book1", "Description of Book2", "Description of Book3"]
 
 function Main() {
     return (
@@ -36,7 +42,7 @@ function Main() {
                             path="/books"
                             element={
                                 <BooksContainer>
-                                    <Books />
+                                    <ImageSlider imageUrls={IMAGES} imageText={IMAGE_DESCRIPTIONS} />
                                 </BooksContainer>
                             }
                         />
@@ -66,7 +72,7 @@ const HomeContainer = ({ children }) => (
 );
 
 const BooksContainer = ({ children }) => (
-    <div className="content-container-books">
+    <div className="content-container-books" >
         {children}
     </div>
 );
