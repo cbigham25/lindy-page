@@ -15,6 +15,11 @@ body {
     background-color: #131515;
 }
 
+#root {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 
 h1,
 h2,
@@ -138,13 +143,30 @@ ul.navbar li a {
 
 .content-container-about {
     background-color: #F5A623;
-    flex: 1;
     display: flex;
-    justify-content: center;
+    flex: 1;
+    justify-content: flex-start;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     height: 80vh;
     width: 100vh;
+}
+
+.test {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.author-image {
+    height: 80vh;
+    min-width: 800px;
+}
+
+.author-bio {
+    padding: 25px;
+    height: 80vh;
+    width: 70vh;
 }
 
 .content h2 {

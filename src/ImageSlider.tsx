@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ArrowBigLeft, ArrowBigRight } from 'lucide-react';
+
+// TODO: Keep following this video to make the animations work: https://youtu.be/Kx8XlKRBZx8?si=MPvZd6qQwj0L22vV
 
 type ImageSliderProps = {
     imageUrls: string[];

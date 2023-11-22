@@ -12,6 +12,7 @@ import book1 from "./assets/placeholder-1.jpg"
 import book2 from "./assets/placeholder-2.jpg"
 import book3 from "./assets/placeholder-3.jpg"
 
+
 const IMAGES = [book1, book2, book3]
 const IMAGE_DESCRIPTIONS = ["Description of Book1", "Description of Book2", "Description of Book3"]
 
