@@ -15,12 +15,6 @@ body {
     background-color: #131515;
 }
 
-#root {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
 h1,
 h2,
 p,
@@ -30,7 +24,7 @@ li {
 }
 
 
-.header-container {
+header {
     background-color: #2B2C28;
     padding: 20px;
     width: 100%;
@@ -42,7 +36,7 @@ li {
     z-index: 1;
 }
 
-h1 {
+header h1 {
     color: #FFF;
     margin: 0;
     display: inline-flex;
@@ -73,7 +67,7 @@ ul.navbar li a {
     align-items: center;
 }
 
-.content {
+main {
     background-color: #1a4311;
     flex: 1;
     display: flex;
@@ -94,13 +88,6 @@ ul.navbar li a {
     align-items: stretch;
     justify-content: space-evenly;
     padding: 50px;
-}
-
-.p-container {
-    display: flex;
-    justify-content: space-evenly;
-    height: 30vh;
-    padding: 20px;
 }
 
 .newsletter-container {
@@ -167,6 +154,11 @@ ul.navbar li a {
     padding: 25px;
     height: 80vh;
     width: 70vh;
+    overflow: hidden;
+}
+
+.author-bio p {
+    margin: 1em 0; 
 }
 
 .content h2 {
@@ -180,7 +172,7 @@ ul.navbar li a {
 
 
 
-.footer-container {
+footer {
     background-color: #2B2C28;
     padding: 20px 0;
     display: flex;
