@@ -147,18 +147,21 @@ main {
 
 .author-image {
     height: 80vh;
-    min-width: 800px;
+
 }
 
 .author-bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5vw;
     padding: 25px;
     height: 80vh;
-    width: 70vh;
-    overflow: hidden;
 }
 
+
 .author-bio p {
-    margin: 1em 0; 
+    margin: 1em 0;
 }
 
 .content h2 {
