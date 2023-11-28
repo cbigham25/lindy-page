@@ -4,7 +4,7 @@ class Home extends Component {
     render() {
         return (
             <div className="container-home">
-                <div className="p-container">
+                <div>
                     <p>Here is some really cool text that introduces the Author page.</p>
                 </div>
                 <div className="sib-form" style={{ textAlign: "center", backgroundColor: "#2b2c28" }}>
