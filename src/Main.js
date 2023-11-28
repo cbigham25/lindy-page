@@ -19,16 +19,16 @@ const IMAGE_DESCRIPTIONS = ["Description of Book1", "Description of Book2", "Des
 function Main() {
     return (
         <Router>
-            <div>
-                <div className="header-container">
+            <>
+                <header>
                     <h1><NavLink to="/">M. J. Lindemann</NavLink></h1>
                     <ul className="navbar">
                         <li><NavLink to="/books">Books</NavLink></li>
                         <li><NavLink to="/about">About</NavLink></li>
                         <li><a href="https://mjlindemann.blogspot.com/">Blog</a></li>
                     </ul>
-                </div>
-                <div className="content">
+                </header>
+                <main>
                     <Routes>
                         <Route
                             exact
@@ -56,11 +56,11 @@ function Main() {
                             }
                         />
                     </Routes>
-                </div>
-                <div className="footer-container">
+                </main>
+                <footer>
                     <div className="footer"></div>
-                </div>
-            </div>
+                </footer>
+            </>
         </Router>
     );
 }
