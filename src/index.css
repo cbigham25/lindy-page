@@ -74,40 +74,17 @@ main {
 }
 
 .content-container-home {
+    background-color: #AF0B08;
     display: flex;
     flex: 1;
     height: 80vh;
     width: 100vh;
-}
-
-.container-home {
-    background-color: #AF0B08;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
+    flex-direction: row;
     align-items: stretch;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 50px;
 }
 
-.newsletter-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 30vh;
-    padding: 20px;
-}
-
-.newsletter {
-    background-color: #F5A623;
-    width: 30vh;
-    height: 20vh;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 .img-slider-img {
     object-fit: cover;
