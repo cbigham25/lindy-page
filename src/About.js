@@ -6,9 +6,9 @@ class About extends Component {
     render() {
         return (
             <>
-               
+
                 <img src={lindyPic} alt="Image of author" className="author-image" />
-                
+
                 <div className="author-bio">
                     <p>M. J. Lindemann is the author of an upcoming epic fantasy trilogy. He lives with his husband and two dogs in Minnesota. In addition to writing, he works as a public health nurse, helping to connect people to home services.</p>
 
@@ -19,7 +19,7 @@ class About extends Component {
                     <p>  What you won't find: Sexual assault of any kind. Racism. Sexism. Homophobia or transphobia.</p>
 
                 </div>
-           </>
+            </>
         );
     }
 }
