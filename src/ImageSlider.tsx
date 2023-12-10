@@ -11,15 +11,18 @@ function ImageSlider({ imageUrls, imageText }: ImageSliderProps) {
     const [imageIndex, setImageIndex] = useState(0);
 
     return (
-        <div>
-            <div style={{ width: "100%", height: "100%" }}>
+        <div className='slider-container'>
+            <div className='img-container'>
                 <img src={imageUrls[imageIndex]} alt={`Image ${imageIndex}`} className='img-slider-img' />
-                <p>{imageText[imageIndex]}</p>
             </div>
-            <button onClick={() => setImageIndex(prevIndex => (prevIndex - 1 + imageUrls.length) % imageUrls.length)}>
+            <div className='description-container'>
+                <p className='book-description'>{imageText[imageIndex]}</p>
+            </div>
+
+            <button className='img-slider-btn' style={{ left: 0 }} onClick={() => setImageIndex(prevIndex => (prevIndex - 1 + imageUrls.length) % imageUrls.length)}>
                 &#10235;
             </button>
-            <button onClick={() => setImageIndex(prevIndex => (prevIndex + 1) % imageUrls.length)}>
+            <button className='img-slider-btn' style={{ right: 0 }} onClick={() => setImageIndex(prevIndex => (prevIndex + 1) % imageUrls.length)}>
                 &#10236;
             </button>
         </div>

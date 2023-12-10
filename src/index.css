@@ -2,7 +2,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    /* outline: 1px solid lime; */
+    outline: 1px solid lime;
 }
 
 
@@ -85,23 +85,61 @@ main {
     padding: 50px;
 }
 
-
-.img-slider-img {
-    object-fit: cover;
-    /* width: 100%;
-    height: 100%;
-    display: block; */
-}
-
 .content-container-books {
     background-color: #5EB1BF;
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     height: 80vh;
-    width: 100vh;
+    width: 100%;
+
+}
+
+.slider-container {
+    background-color: #5EB1BF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 80vh;
+    width: 100%;
+
+
+}
+
+.img-container {
+    width: 100%;
+    max-width: 50vh;
+    max-height: 80vh;
+}
+
+.img-slider-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.description-container {
+    width: 100%;
+    max-width: 50vh;
+    max-height: 80vh;
+}
+
+.book-description {
+    height: 100%;
+    width: 50%;
+}
+
+.img-slider-btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 1rem;
+    cursor: pointer;
 
 }
 
@@ -114,12 +152,6 @@ main {
     flex-direction: row;
     height: 80vh;
     width: 100vh;
-}
-
-.test {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
 }
 
 .author-image {
