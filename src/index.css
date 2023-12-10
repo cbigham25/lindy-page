@@ -2,7 +2,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    outline: 1px solid lime;
+    /* outline: 1px solid lime; */
 }
 
 
@@ -86,7 +86,7 @@ main {
 }
 
 .content-container-books {
-    background-color: #5EB1BF;
+    background-color: #2B2C28;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -98,7 +98,7 @@ main {
 }
 
 .slider-container {
-    background-color: #5EB1BF;
+    background-color: #2B2C28;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,6 +113,24 @@ main {
     width: 100%;
     max-width: 50vh;
     max-height: 80vh;
+}
+
+.img-container-enter {
+    opacity: 0;
+}
+
+.img-container-enter-active {
+    opacity: 1;
+    transition: opacity 200ms;
+}
+
+.img-container-exit {
+    opacity: 1;
+}
+
+.img-container-exit-active {
+    opacity: 0;
+    transition: opacity 200ms;
 }
 
 .img-slider-img {
@@ -133,15 +151,41 @@ main {
     width: 50%;
 }
 
-.img-slider-btn {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    padding: 1rem;
-    cursor: pointer;
+.img-slider-left-btn {
+    display: 'block';
+    position: 'absolute';
+    top: '0';
+    bottom: '0';
+    cursor: 'pointer';
+    width: '10%';
+    text-align: 'center';
+    font-size: '5em';
+    color: '#2B2C28';
+    left: '0';
+    background-color: 'linear-gradient(to left,  #2B2C28 30%, #fff 70%)';
 
 }
+
+.left-btn-transition-enter {
+    background-color: 'linear-gradient(to left,  #2B2C28 30%, #fff 70%)';
+}
+
+.left-btn-transition-enter-active {
+    background-color: 'linear-gradient(to left,  #2B2C28 30%, red 70%)';
+    transition: 'background-image 1s ease';
+}
+
+.left-btn-transition-exit {
+    background-color: 'linear-gradient(to left,  #2B2C28 30%, red 70%)';
+
+}
+
+.left-btn-transition-exit-active {
+    transition: 'background-image 1s ease';
+    background-color: 'linear-gradient(to left,  #2B2C28 30%, #fff 70%)';
+
+}
+
 
 .content-container-about {
     background-color: #F5A623;
