@@ -18,7 +18,8 @@
     },
     "include": [
         "src/**/*.tsx",
-        "src/**/*.ts"
+        "src/**/*.ts",
+        "src/ImageSlider.js"
     ],
     "exclude": [
         "node_modules"

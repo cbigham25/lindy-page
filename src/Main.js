@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import About from "./About";
 import Home from "./Home";
-import ImageSlider from "./ImageSlider.tsx";
+import ImageSlider from "./ImageSlider.js";
 import book1 from "./assets/placeholder-1.jpg"
 import book2 from "./assets/placeholder-2.jpg"
 import book3 from "./assets/placeholder-3.jpg"
