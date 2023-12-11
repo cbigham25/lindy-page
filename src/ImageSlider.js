@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
+import './ImageSlider.css';
+
 
 
 function ImageSlider({ imageUrls, imageText }) {
