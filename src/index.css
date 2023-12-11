@@ -5,8 +5,6 @@
     /* outline: 1px solid lime; */
 }
 
-
-
 body {
     display: flex;
     flex-direction: column;
@@ -184,8 +182,6 @@ main {
 .img-slider-left-btn:hover {
     opacity: .8;
 }
-
-
 
 .content-container-about {
     background-color: #F5A623;

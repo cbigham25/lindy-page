@@ -1,13 +1,12 @@
 import { useState, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import './ImageSlider.css';
 
 
 
 function ImageSlider({ imageUrls, imageText }) {
 
     const [imageIndex, setImageIndex] = useState(0);
-
+    const [inProp, setInProp] = useState(true);
 
     return (
         <div className='slider-container'>
@@ -16,6 +15,11 @@ function ImageSlider({ imageUrls, imageText }) {
                 timeout={500} // Adjust as needed
                 classNames='fade'
                 unmountOnExit
+                style={{
+                    opacity: inProp ? 1 : 0,
+                    transform: `translateX(${inProp ? 0 : '100%'})`,
+                    transition: 'opacity 500ms, transform 500ms',
+                }}
             >
                 <div className='img-container'>
                     <img src={imageUrls[imageIndex]} alt={`Image ${imageIndex}`} className='img-slider-img' />
