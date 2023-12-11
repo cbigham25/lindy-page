@@ -113,24 +113,6 @@ main {
     max-height: 80vh;
 }
 
-.img-container-enter {
-    opacity: 0;
-}
-
-.img-container-enter-active {
-    opacity: 1;
-    transition: opacity 200ms;
-}
-
-.img-container-exit {
-    opacity: 1;
-}
-
-.img-container-exit-active {
-    opacity: 0;
-    transition: opacity 200ms;
-}
-
 .img-slider-img {
     object-fit: cover;
     height: 100%;

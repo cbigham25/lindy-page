@@ -19,11 +19,15 @@ function ImageSlider({ imageUrls, imageText }) {
                 onExited={() => setInProp(false)}
             >
                 <div className='img-container'>
-                    <img src={imageUrls[imageIndex]} alt={`Image ${imageIndex}`} className='img-slider-img' style={{
-                        opacity: inProp ? 1 : 0,
-                        transform: `translateX(${inProp ? 0 : '100%'})`,
-                        transition: 'opacity 1s, transform 1s',
-                    }} />
+                    <img src={imageUrls[imageIndex]}
+                        alt={`Image ${imageIndex}`}
+                        className='img-slider-img'
+                        style={{
+                            opacity: inProp ? 1 : 0,
+                            transform: `translateX(${inProp ? 0 : '100%'})`,
+                            transition: 'opacity 1s, transform 1s',
+                        }}
+                    />
                 </div>
             </CSSTransition>
             <div className='description-container'>
@@ -31,13 +35,13 @@ function ImageSlider({ imageUrls, imageText }) {
             </div>
             <button
                 className='img-slider-left-btn'
-                onClick={() => setImageIndex(prevIndex => (prevIndex - 1 + imageUrls.length) % imageUrls.length)}
+                onClick={() => setImageIndex((prevIndex) => (prevIndex - 1 + imageUrls.length) % imageUrls.length)}
             >
                 &#8656;
             </button>
             <button
                 className='img-slider-right-btn'
-                onClick={() => setImageIndex(prevIndex => (prevIndex + 1) % imageUrls.length)}
+                onClick={() => setImageIndex((prevIndex) => (prevIndex + 1) % imageUrls.length)}
             >
                 &#8658;
             </button>
