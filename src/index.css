@@ -161,37 +161,28 @@ main {
     width: 10%;
     text-align: center;
     font-size: 5em;
-    color: #2B2C28;
+    color: #fff;
+    opacity: 0.5;
+    transition: opacity 200ms ease;
+    background: linear-gradient(to top, #826182, 5%, #2B2C28);
+
 }
 
 .img-slider-right-btn {
     right: 0;
-    background: linear-gradient(to left, #2B2C28 30%, #fff 100%);
+
+
 }
 
 .img-slider-left-btn {
     left: 0;
-    background: linear-gradient(to right, #b2c772 30%, #fff 100%);
+    background: linear-gradient(to right, #2B2C28 30%, #fff 100%) linear-gradient(to top, #2B2C28 30%, #fff 100%) linear-gradient(to bottom, #2B2C28 30%, #fff 100%);
+    ;
 }
 
-.left-btn-transition-enter,
-.left-btn-transition-exit,
-.left-btn-transition-enter-active,
-.left-btn-transition-exit-active {
-    background: linear-gradient(to left, #2B2C28 30%, #fff 70%);
-}
-
-.left-btn-transition-enter-active,
-.left-btn-transition-exit-active {
-    transition: background-image 1s ease;
-}
-
-.left-btn-transition-enter-active {
-    background: linear-gradient(to left, #2B2C28 30%, red 70%);
-}
-
-.left-btn-transition-exit-active {
-    background: linear-gradient(to left, #2B2C28 30%, #fff 70%);
+.img-slider-right-btn:hover,
+.img-slider-left-btn:hover {
+    opacity: .8;
 }
 
 
