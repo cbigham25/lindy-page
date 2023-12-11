@@ -11,18 +11,19 @@ function ImageSlider({ imageUrls, imageText }) {
     return (
         <div className='slider-container'>
             <CSSTransition
-                in={true} // Set to true to make the initial transition happen
+                in={inProp} // Set to true to make the initial transition happen
                 timeout={500} // Adjust as needed
                 classNames='fade'
                 unmountOnExit
-                style={{
-                    opacity: inProp ? 1 : 0,
-                    transform: `translateX(${inProp ? 0 : '100%'})`,
-                    transition: 'opacity 500ms, transform 500ms',
-                }}
+                onEnter={() => setInProp(true)}
+                onExited={() => setInProp(false)}
             >
                 <div className='img-container'>
-                    <img src={imageUrls[imageIndex]} alt={`Image ${imageIndex}`} className='img-slider-img' />
+                    <img src={imageUrls[imageIndex]} alt={`Image ${imageIndex}`} className='img-slider-img' style={{
+                        opacity: inProp ? 1 : 0,
+                        transform: `translateX(${inProp ? 0 : '100%'})`,
+                        transition: 'opacity 1s, transform 1s',
+                    }} />
                 </div>
             </CSSTransition>
             <div className='description-container'>
