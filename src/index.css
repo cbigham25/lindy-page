@@ -2,7 +2,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    /* outline: 1px solid lime; */
+    outline: 1px solid lime;
 }
 
 body {
@@ -102,33 +102,39 @@ main {
     align-items: center;
     flex-direction: row;
     height: 80vh;
+    max-height: 80vh;
     width: 100%;
 
 
 }
 
 .img-container {
-    width: 100%;
-    max-width: 50vh;
+    width: 50%;
     max-height: 80vh;
+    padding-left: 10%;
+    padding: 5rem, 5rem;
 }
 
 .img-slider-img {
-    object-fit: cover;
+    object-fit: contain;
     height: 100%;
     width: 100%;
     display: block;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: translate 300ms ease-in-out;
 }
 
 .description-container {
     width: 100%;
-    max-width: 50vh;
-    max-height: 80vh;
+    height: 100%;
+    padding: 5vh;
 }
 
 .book-description {
     height: 100%;
     width: 50%;
+    max-width: 70vh;
 }
 
 .img-slider-right-btn,
@@ -148,10 +154,29 @@ main {
 
 }
 
+.img-slider-left-btn:hover::before,
+.img-slider-right-btn:hover::before {
+    animation: squish 200ms ease-in-out;
+}
+
+@keyframes squish {
+    50% {
+        scale: 1.4 0.6;
+    }
+}
+
+.img-slider-left-btn::before {
+    content: '\021D0';
+    display: inline-block;
+}
+
+.img-slider-right-btn::before {
+    content: '\021D2';
+    display: inline-block;
+}
+
 .img-slider-right-btn {
     right: 0;
-
-
 }
 
 .img-slider-left-btn {
@@ -163,6 +188,24 @@ main {
 .img-slider-right-btn:hover,
 .img-slider-left-btn:hover {
     opacity: .8;
+}
+
+.dot-container {
+    display: flex;
+    bottom: 10rem;
+    left: 37.1%;
+    translate: -50%;
+    gap: 2rem;
+    color: #fff;
+}
+
+.img-slider-dot-btn {
+
+    transition: scale 100ms ease-in-out;
+}
+
+.img-slider-dot-btn:hover {
+    scale: 1.5;
 }
 
 .content-container-about {
