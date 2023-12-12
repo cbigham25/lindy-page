@@ -22,6 +22,7 @@ li {
 }
 
 
+/* Header Styles */
 header {
     background-color: #2B2C28;
     padding: 20px;
@@ -39,7 +40,6 @@ header h1 {
     margin: 0;
     display: inline-flex;
     align-items: center;
-
 }
 
 ul.navbar li {
@@ -48,7 +48,7 @@ ul.navbar li {
     margin: 0;
 }
 
-ul.navbar {
+.navbar {
     background-color: #2B2C28;
     padding: 0;
     display: inline-flex;
@@ -65,12 +65,14 @@ ul.navbar li a {
     align-items: center;
 }
 
+/* Main Section Styles */
 main {
     background-color: #1a4311;
     flex: 1;
     display: flex;
 }
 
+/* Home Page */
 .content-container-home {
     background-color: #AF0B08;
     display: flex;
@@ -83,6 +85,7 @@ main {
     padding: 50px;
 }
 
+/* Books Page */
 .content-container-books {
     background-color: #2B2C28;
     flex: 1;
@@ -142,37 +145,6 @@ main {
     opacity: 1;
 }
 
-.description-container {
-
-    width: 40%;
-    height: 100%;
-}
-
-.book-description {
-    display: flex;
-    padding-right: 5vh;
-    width: 40%;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.5em;
-    font-size: 1.5vw;
-    color: #fff;
-    height: 80vh;
-    opacity: 0;
-    position: absolute;
-    transition: opacity 700ms ease-out;
-}
-
-.dot-container {
-    display: flex;
-    width: 100%;
-    height: 10%;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    color: #fff;
-}
-
 .img-slider-right-btn,
 .img-slider-left-btn {
     display: block;
@@ -193,12 +165,6 @@ main {
 .img-slider-left-btn:hover::before,
 .img-slider-right-btn:hover::before {
     animation: squish 200ms ease-in-out;
-}
-
-@keyframes squish {
-    50% {
-        scale: 1.4 0.6;
-    }
 }
 
 .img-slider-left-btn::before {
@@ -238,6 +204,38 @@ main {
     scale: 1.5;
 }
 
+.dot-container {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: #fff;
+}
+
+.description-container {
+
+    width: 40%;
+    height: 100%;
+}
+
+.book-description {
+    display: flex;
+    padding-right: 5vh;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5em;
+    font-size: 1.5vw;
+    color: #fff;
+    height: 80vh;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 700ms ease-out;
+}
+
+/* About Page */
 .content-container-about {
     background-color: #F5A623;
     display: flex;
@@ -290,4 +288,134 @@ footer {
     bottom: 0;
     z-index: 1;
     height: 10vh;
+}
+
+/* Animations */
+
+@keyframes squish {
+    50% {
+        scale: 1.4 0.6;
+    }
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #FFF;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 480px) {
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        top: 10vh;
+        right: 0;
+        width: 70%;
+        background-color: #2B2C28;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar li {
+        justify-content: center;
+        padding: 15px;
+        width: 50%;
+    }
+
+
+    .img-slider-right-btn {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+        width: 10%;
+        height: 100%;
+        text-align: center;
+        font-size: 2em;
+        color: #fff;
+        opacity: 0.5;
+        transition: opacity 200ms ease;
+        background: linear-gradient(to top, #826182, 5%, #2B2C28);
+
+    }
+
+    .img-slider-left-btn {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+        width: 10%;
+        height: 100%;
+        text-align: center;
+        font-size: 2em;
+        color: #fff;
+        opacity: 0.5;
+        transition: opacity 200ms ease;
+        background: linear-gradient(to top, #826182, 5%, #2B2C28);
+
+    }
+
+    .mobile-slider-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 80vh;
+        width: 100%;
+        max-height: 80vh;
+
+    }
+
+    .img-slider-img {
+        object-fit: contain;
+        justify-content: center;
+        position: fixed;
+        height: 40vh;
+        width: 60%;
+
+    }
+
+    .description-container {
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+    }
+
+    .book-description {
+        display: flex;
+        padding-right: 0;
+        width: 80%;
+        line-height: 1.5em;
+        font-size: 4vw;
+        color: #fff;
+        height: 40vh;
+        max-height: 40vh;
+        opacity: 0;
+        position: absolute;
+        transition: opacity 700ms ease-out;
+    }
+
 }
