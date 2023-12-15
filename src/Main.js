@@ -47,25 +47,20 @@ function Main() {
                             exact
                             path="/"
                             element={
-                                <HomeContainer>
-                                    <Home />
-                                </HomeContainer>
+
+                                <Home />
                             }
                         />
                         <Route
                             path="/books"
                             element={
-                                <BooksContainer>
-                                    <ImageSlider imageUrls={IMAGES} imageText={IMAGE_DESCRIPTIONS} />
-                                </BooksContainer>
+                                <ImageSlider imageUrls={IMAGES} imageText={IMAGE_DESCRIPTIONS} />
                             }
                         />
                         <Route
                             path="/about"
                             element={
-                                <AboutContainer>
-                                    <About />
-                                </AboutContainer>
+                                <About />
                             }
                         />
                     </Routes>
@@ -77,24 +72,5 @@ function Main() {
         </Router>
     );
 }
-
-// Define container components for each route
-const HomeContainer = ({ children }) => (
-    <div className="content-container-home">
-        {children}
-    </div>
-);
-
-const BooksContainer = ({ children }) => (
-    <div className="content-container-books" >
-        {children}
-    </div>
-);
-
-const AboutContainer = ({ children }) => (
-    <div className="content-container-about">
-        {children}
-    </div>
-);
 
 export default Main;
