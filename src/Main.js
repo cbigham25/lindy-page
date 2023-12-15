@@ -41,6 +41,12 @@ function Main() {
                         <li><a href="https://mjlindemann.blogspot.com/">Blog</a></li>
                     </ul>
                 </header>
+                <div className="subheader">
+                    <a href="https://dashboard.mailerlite.com/forms/452769/107643299860317814/share">
+                        <h2>Sign-up for Free Short Story</h2>
+                    </a>
+                </div>
+
                 <main>
                     <Routes>
                         <Route
@@ -69,7 +75,7 @@ function Main() {
                     <div className="footer"></div>
                 </footer>
             </>
-        </Router>
+        </Router >
     );
 }
 
