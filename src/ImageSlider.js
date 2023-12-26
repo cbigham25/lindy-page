@@ -13,7 +13,7 @@ function ImageSlider({ imageUrls, imageText }) {
                     onClick={() => setImageIndex((prevIndex) => (prevIndex - 1 + imageUrls.length) % imageUrls.length)}
                 >
                 </button>
-                <div className='mobile-slider-container'>
+                <div className='mobile-container'>
                     <div className='book-slider-container'>
                         <div className='img-container' style={{ width: "100%", height: "100%", display: "flex", overflow: "hidden" }}>
                             {imageUrls.map((url, index) => (
@@ -37,9 +37,7 @@ function ImageSlider({ imageUrls, imageText }) {
                         </div>
                     </div>
 
-
-                    <div className='description-container' style={{ display: "flex", overflow: "hidden" }}>
-
+                    <div className='description-container'>
 
                         {imageText.map((imageText, index) => (
                             <p
@@ -52,11 +50,8 @@ function ImageSlider({ imageUrls, imageText }) {
                                 {imageText}
                             </p>
                         ))}
-
-
                     </div>
                 </div>
-
                 <button
                     className='img-slider-right-btn'
                     onClick={() => setImageIndex((prevIndex) => (prevIndex + 1) % imageUrls.length)}
