@@ -14,11 +14,14 @@ import Book1 from "./Book1.js";
 import Book2 from "./Book2.js";
 import Book3 from "./Book3.js";
 
+
 function BookNavigator() {
     const navigate = useNavigate();
     const location = useLocation();
     const books = ["/books/book1", "/books/book2", "/books/book3"];
     const [currentBookIndex, setCurrentBookIndex] = useState(0);
+
+    const isBookRoute = books.includes(location.pathname);
 
     useEffect(() => {
         const currentPath = location.pathname;
@@ -36,12 +39,12 @@ function BookNavigator() {
         navigate(books[newBookIndex]);
     };
 
-    return (
+    return isBookRoute ?(
         <div>
             <button className='img-slider-left-btn' onClick={() => navigateToBook(-1)}></button>
             <button className='img-slider-right-btn' onClick={() => navigateToBook(1)}></button>
         </div>
-    );
+    ) : null;
 }
 
 function Main() {
