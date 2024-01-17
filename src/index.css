@@ -2,7 +2,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    /* outline: 1px solid lime; */
+    outline: 1px solid lime;
 }
 
 body {
@@ -105,16 +105,12 @@ main {
 }
 
 /* Books Page */
-.content-container-books {
-    background-color: #2B2C28;
-    flex: 1;
+.books-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: row;
-    height: 80vh;
-    width: 100%;
-
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100vw;
 }
 
 .book-main-container {
@@ -125,22 +121,44 @@ main {
     flex-direction: row;
     height: 80vh;
     max-height: 80vh;
-    width: 100vw;
+    min-width: 100vw; 
+    overflow: hidden;
 }
-.book-main-container img{
-    height: 60vh;
+
+.book-main-container img {
+    height: auto;
     max-height: 60vh;
-    min-width: 15vw;
-    margin-right: 2.5vw;
+    max-width: 20vw; 
+    width: 40vw;
+    margin-right: 5vw;
 }
-.book-main-container p{
+
+.book-main-container p {
     color: #FFF;
-    height: 60vh;
-    max-height: 60vh;
-    min-width: 50vw;
-    max-width: 50vw;
-    font-size: 2vw;
+    width: 40vw; 
+    text-align: center; 
 }
+
+.scroll-button {
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 50%; /* Centers vertically */
+    transform: translateY(-50%); /* Adjusts the button to be centered vertically */
+    background-color: #333; /* Example background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1000; /* Ensures it's above other elements */
+}
+
+.scroll-button.left {
+    left: 10px;
+}
+
+.scroll-button.right {
+    right: 10px;
+}
+
 
 
 
