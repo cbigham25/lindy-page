@@ -82,7 +82,7 @@ ul.navbar li a {
 
 /* Main Section Styles */
 main {
-  background-color: #1a4311;
+  background-color: #2b2c28;
   flex: 1;
   display: flex;
 }
@@ -108,9 +108,17 @@ main {
 }
 
 /* Books Page */
+
+.slider-container {
+  overflow: hidden;
+  position: relative;
+}
+
 .books-wrapper {
   display: flex;
   flex-direction: row;
+  transition: transform 1s ease;
+  scroll-behavior: smooth;
 }
 
 .book-container {
@@ -121,25 +129,34 @@ main {
   flex-direction: row;
   height: 80vh;
   max-height: 80vh;
+  min-width: 100vw;
   width: 100vw;
-  position: relative;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.book-container.active {
+  opacity: 1;
 }
 
 .book-container img {
   height: auto;
   max-height: 60vh;
   width: 50%;
-  margin-right: 5vw;
+  padding-right: 5vw;
   flex-shrink: 0;
   flex-grow: 0;
 }
 
 .book-container p {
   color: #fff;
-  width: 50%;
+  width: 70%;
   text-align: center;
   flex-shrink: 0;
   flex-grow: 0;
+  font-size: 3vh;
 }
 
 .img-slider-btn {
@@ -155,6 +172,14 @@ main {
 
 .img-slider-btn:hover {
   background-color: rgb(0, 0, 0, 0.2);
+}
+
+.img-slider-btn.left {
+  left: 0;
+}
+
+.img-slider-btn.right {
+  right: 0;
 }
 
 .img-slider-right-btn,

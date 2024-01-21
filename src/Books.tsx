@@ -1,49 +1,41 @@
 import React, { useState } from 'react'
-import { bookDescriptions } from './assets/bookDescriptions'
 
-type BooksProps = {
-  imageUrls: string[]
-  bookDescriptions: string[]
-}
-
-export function Books({ imageUrls }: BooksProps) {
+export function Books({ imageUrls, bookDescriptions }) {
   const [imageIndex, setImageIndex] = useState(0)
 
   function showNextImage() {
-    setImageIndex((index) => {
-      if (index === imageUrls.length - 1) return 0
-      return index + 1
-    })
+    setImageIndex((prevIndex) => (prevIndex + 1) % imageUrls.length)
   }
+
   function showPrevImage() {
-    setImageIndex((index) => {
-      if (index === 0) return imageUrls.length - 1
-      return index - 1
+    setImageIndex((prevIndex) => {
+      if (prevIndex === 0) return imageUrls.length - 1
+      return prevIndex - 1
     })
   }
 
   return (
-    <div>
-      <div className="books-wrapper">
+    <div className="slider-container">
+      <div
+        className="books-wrapper"
+        style={{
+          transform: `translateX(${-100 * imageIndex}vw)`,
+        }}
+      >
         {imageUrls.map((url, index) => (
-          <div key={index} className="book-container">
+          <div
+            key={index}
+            className={`book-container ${index === imageIndex ? 'active' : ''}`}
+          >
             <img src={url} alt="Book cover" />
             <p>{bookDescriptions[index]}</p>
           </div>
         ))}
       </div>
-      <button
-        onClick={showPrevImage}
-        className="img-slider-btn"
-        style={{ left: 0 }}
-      >
+      <button onClick={showPrevImage} className="img-slider-btn left">
         LEFT
       </button>
-      <button
-        onClick={showNextImage}
-        className="img-slider-btn"
-        style={{ right: 0 }}
-      >
+      <button onClick={showNextImage} className="img-slider-btn right">
         RIGHT
       </button>
     </div>
