@@ -49,7 +49,9 @@ function Main() {
                 </NavLink>
               </li>
               <li>
-                <a href="https://mjlindemann.blogspot.com/">Blog</a>
+                <a href="https://mjlindemann.blogspot.com/" onClick={closeMenu}>
+                  Blog
+                </a>
               </li>
             </ul>
           </div>
