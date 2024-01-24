@@ -17,9 +17,9 @@ export function Books({ imageUrls, bookDescriptions }) {
   return (
     <div className="slider-container">
       <div
-        className="books-wrapper"
+        className="book-wrapper"
         style={{
-          transform: `translateX(${-100 * imageIndex}vw)`,
+          '--image-index': imageIndex,
         }}
       >
         {imageUrls.map((url, index) => (
