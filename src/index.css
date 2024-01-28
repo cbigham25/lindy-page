@@ -143,12 +143,10 @@ main {
 
 .book-wrapper {
   --image-index: 0;
-
   display: flex;
   flex-direction: row;
   transition: transform 1s ease;
   scroll-behavior: smooth;
-  transform: translateX(calc(-100vw * var(--image-index)));
 }
 
 .book-container {
@@ -163,30 +161,33 @@ main {
   width: 100vw;
   padding-left: 20vw;
   padding-right: 20vw;
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
-}
-
-.book-container.active {
-  opacity: 1;
 }
 
 .book-container img {
   height: auto;
   max-height: 60vh;
-  width: 50%;
+  width: 25vw;
   padding-right: 5vw;
   flex-shrink: 0;
   flex-grow: 0;
 }
 
-.book-container p {
+.desc-container {
   color: #fff;
   width: 70%;
   text-align: center;
   flex-shrink: 0;
   flex-grow: 0;
+  font-size: 2vh;
+}
+
+.desc-container h1 {
   font-size: 3vh;
+  padding-bottom: 2vh;
+}
+
+.desc-container p {
+  padding: 2vh;
 }
 
 .img-slider-btn {
@@ -345,23 +346,23 @@ footer {
   .book-container {
     flex-direction: column;
     opacity: 1;
+    max-height: 170vh;
+    height: auto;
   }
   .book-container img {
     padding: 25px;
-    height: 35vh;
     width: 70vw;
   }
-  .book-container p {
+  .desc-container {
     padding: 25px;
     font-size: 1.2rem;
     width: 100vw;
-    height: 45vh;
   }
   .img-slider-btn {
     display: none;
   }
   .slider-container {
-    overflow: auto;
+    display: flex;
   }
 
   .about-wrapper {
