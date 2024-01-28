@@ -88,12 +88,11 @@ export function Books({ imageUrls }) {
           </div>
         ))}
       </div>
-      <button className="img-slider-btn left" onClick={goToPreviousBook}>
-        LEFT
-      </button>
-      <button className="img-slider-btn right" onClick={goToNextBook}>
-        RIGHT
-      </button>
+      <button
+        className="img-slider-btn left"
+        onClick={goToPreviousBook}
+      ></button>
+      <button className="img-slider-btn right" onClick={goToNextBook}></button>
     </div>
   )
 }
