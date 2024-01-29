@@ -8,13 +8,11 @@ import {
 import book1 from './assets/placeholder-1.jpg'
 import book2 from './assets/placeholder-2.jpg'
 import book3 from './assets/placeholder-3.jpg'
-import { bookDescriptions } from './assets/bookDescriptions.js'
 import About from './About'
 import Home from './Home'
 import Books from './Books.tsx'
 
 const IMAGES = [book1, book2, book3]
-const DESC = [bookDescriptions[0], bookDescriptions[1], bookDescriptions[2]]
 
 function Main() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -65,10 +63,7 @@ function Main() {
         <main>
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route
-              path="/books"
-              element={<Books imageUrls={IMAGES} bookDescriptions={DESC} />}
-            />
+            <Route path="/books" element={<Books imageUrls={IMAGES} />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </main>

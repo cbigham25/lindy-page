@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
 const Book1 = ({ imageUrl }) => (
-  <div className="book-container">
+  <div className="book-container" id="book-1">
     <img src={imageUrl} alt="Book cover 1" />
     <div className="desc-container">
       {/* Book 1 Description HTML here */}
-      <h1>"May the will of the world guide your path."</h1>
+      <h1>"MAY THE WILL OF THE WORLD GUIDE YOUR PATH"</h1>
       <p>
         Plagued by the relentless husk, the populace must seek refuge behind
         barriers powered by crystal pylons provided by the Guild. But
