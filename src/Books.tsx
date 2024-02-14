@@ -34,21 +34,21 @@ const Book1 = ({ imageUrl }) => (
 )
 
 const Book2 = ({ imageUrl }) => (
-  <div className="book-container">
+  <div className="book-container" id="book-2">
     <img src={imageUrl} alt="Book cover 2" />
     <div className="desc-container">
       {/* Book 2 Description HTML here */}
-      <p>Book 2 detailed description...</p>
+      <p>Patience is rewarded...</p>
     </div>
   </div>
 )
 
 const Book3 = ({ imageUrl }) => (
-  <div className="book-container">
+  <div className="book-container" id="book-3">
     <img src={imageUrl} alt="Book cover 3" />
     <div className="desc-container">
       {/* Book 3 Description HTML here */}
-      <p>Book 3 detailed description...</p>
+      <p>I promise...</p>
     </div>
   </div>
 )
@@ -71,10 +71,10 @@ export function Books({ imageUrls }) {
     setCurrentBook((current) => (current - 1 + totalBooks) % totalBooks)
   }
 
-  const wrapperStyle = {
-    transform: `translateX(-${currentBook * 100}vw)`,
-    transition: 'transform 1s ease',
-  }
+  // const wrapperStyle = {
+  //   transform: `translateX(-${currentBook * 100}vw)`,
+  //   transition: 'transform 1s ease',
+  // }
 
   return (
     <div className="slider-container">
