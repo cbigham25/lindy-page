@@ -35,7 +35,10 @@ function Main() {
           </h1>
 
           {/* Navigation Menu */}
-          <div className={`nav-wrapper ${isMenuOpen ? 'open' : ''}`}>
+          <div
+            className={`nav-wrapper ${isMenuOpen ? 'open' : ''}`}
+            style={{ zIndex: 1000 }}
+          >
             <ul className={`navbar ${isMenuOpen ? 'open' : ''}`}>
               <li>
                 <NavLink to="/books" onClick={closeMenu}>
