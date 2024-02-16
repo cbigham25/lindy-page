@@ -33,6 +33,9 @@
       "react-app/jest"
     ]
   },
+  "svgrc": {
+    "throwIfNamespace": false
+  },
   "browserslist": {
     "production": [
       ">0.2%",

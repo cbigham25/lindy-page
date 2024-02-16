@@ -12,20 +12,11 @@ import book3 from './assets/placeholder-3.jpg'
 import About from './About'
 import Home from './Home.tsx'
 import Books from './Books.tsx'
+import Socials from './Social.js'
 
 const IMAGES = [book1, book2, book3]
 
 function Main() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
-  const closeMenu = () => {
-    setIsMenuOpen(false)
-  }
-
   return (
     <Router>
       <>
@@ -35,33 +26,18 @@ function Main() {
           </h1>
 
           {/* Navigation Menu */}
-          <div
-            className={`nav-wrapper ${isMenuOpen ? 'open' : ''}`}
-            style={{ zIndex: 1000 }}
-          >
-            <ul className={`navbar ${isMenuOpen ? 'open' : ''}`}>
+          <div className={`nav-wrapper`} style={{ zIndex: 1000 }}>
+            <ul className={`navbar`}>
               <li>
-                <NavLink to="/books" onClick={closeMenu}>
-                  Books
-                </NavLink>
+                <NavLink to="/books">Books</NavLink>
               </li>
               <li>
-                <NavLink to="/about" onClick={closeMenu}>
-                  About
-                </NavLink>
+                <NavLink to="/about">About</NavLink>
               </li>
               <li>
-                <a href="https://mjlindemann.blogspot.com/" onClick={closeMenu}>
-                  Blog
-                </a>
+                <a href="https://mjlindemann.blogspot.com/">Blog</a>
               </li>
             </ul>
-          </div>
-          {/* Hamburger Icon */}
-          <div className="hamburger" onClick={toggleMenu}>
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
           </div>
         </header>
         <main>
@@ -72,7 +48,20 @@ function Main() {
           </Routes>
         </main>
         <footer>
-          <div className="footer"></div>
+          <ul className={`navbar-footer`}>
+            <li>
+              <NavLink to="/books">Books</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About</NavLink>
+            </li>
+            <li>
+              <a href="https://mjlindemann.blogspot.com/">Blog</a>
+            </li>
+          </ul>
+          <ul className={`social-nav-footer`}>
+            <Socials />
+          </ul>
         </footer>
       </>
     </Router>

@@ -78,18 +78,12 @@ ul.navbar li {
   display: flex;
   justify-content: space-around;
   width: 40vw;
-  z-index: 1000;
   opacity: 1;
 }
 
 .navbar {
   padding: 0;
   display: inline-flex;
-}
-
-.navbar.open {
-  display: flex;
-  justify-content: space-around;
 }
 
 ul.navbar li a {
@@ -337,16 +331,31 @@ main {
 footer {
   background-color: #2b2c28;
   padding: 20px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   position: sticky;
   bottom: 0;
   z-index: 1;
   height: 10vh;
   border: solid #61645a;
   border-width: 2px 0 0 0;
+}
+
+.navbar-footer {
+  display: none;
+}
+
+.social-nav-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2vh;
+}
+
+.social-nav-footer li {
+  opacity: 0.4;
+  display: inline-flex;
+  padding: 1vh;
+}
+.social-nav-footer li img {
+  width: 32px;
 }
 
 /* Animations */
@@ -694,39 +703,51 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-  header h1 {
-    font-size: 2rem;
-  }
-  .nav-wrapper {
-    opacity: 0.5;
-    transform: translateY(-100%);
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  }
-  .nav-wrapper.open {
-    position: absolute;
-    border: solid #61645a;
-    border-width: 0 0 2px 2px;
-    right: 0;
-    top: 10vh;
-    height: 40vh;
-    width: 50vw;
-    transform: translateY(-2px);
-    z-index: 20;
-    opacity: 1;
-  }
-  .navbar {
-    display: none;
-    flex-direction: column;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  /* Home Page */
   .fog {
     display: none;
   }
+
+  header h1 {
+    font-size: 2rem;
+    width: 100vw;
+    justify-content: center;
+  }
+  header {
+    justify-content: center;
+  }
+  .nav-wrapper {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+  footer {
+    height: 15vh;
+  }
+  .nav-wrapper-footer {
+    display: flex;
+  }
+
+  .navbar-footer {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  ul.navbar-footer li {
+    display: inline-flex;
+    width: 20vw;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Urbanist', sans-serif;
+    border: solid #fff;
+    border-width: 0 0 2px 0;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  /* Home Page */
+
   .content-container-home {
     display: flex;
     flex: 1;
