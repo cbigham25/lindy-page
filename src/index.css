@@ -780,6 +780,7 @@ body {
     justify-content: center;
     padding: 0px;
     z-index: 3;
+    position: sticky;
   }
 
   .content-container-home img {
