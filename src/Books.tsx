@@ -29,6 +29,13 @@ const Book1 = ({ imageUrl }) => (
         All four possess the power to save the world. Will their efforts avoid
         the coming calamity or incite catastrophe?
       </p>
+      <a
+        href="https://www.amazon.com/dp/B0CVS4M1BZ/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p className="preorder">Pre-order Now!</p>
+      </a>
     </div>
   </div>
 )

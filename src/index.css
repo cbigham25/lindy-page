@@ -107,18 +107,6 @@ ul.navbar li a {
   align-items: center;
 }
 
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-.hamburger .line {
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  margin: 5px 0;
-}
-
 /* Main Section Styles */
 main {
   background-color: #2b2c28;
@@ -130,12 +118,11 @@ main {
 .content-container-home {
   display: flex;
   flex: 1;
-  height: 85vh;
+  height: 83vh;
   width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 50px;
   z-index: 3;
 }
 
@@ -150,6 +137,9 @@ main {
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.3s;
   -webkit-transition-timing-function: ease;
+  position: absolute;
+  top: 17vh;
+  right: 15vw;
 }
 
 .content-container-home img:hover {
@@ -160,11 +150,16 @@ main {
   color: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 40vh;
+  width: 40vw;
   font-size: 4em;
   line-height: 1.5em;
   padding: 0 50px;
+  top: 25vh;
+  left: 15vw;
+  position: absolute;
 }
 
 .home-p p {
@@ -172,13 +167,8 @@ main {
 }
 
 .preorder {
-  padding-top: 10vh;
-  transition: transform 0.3s ease-in-out;
+  padding-top: 5vh;
   text-decoration: underline;
-}
-
-.preorder:hover {
-  transform: scale(1.1);
 }
 
 .stripe {
@@ -215,8 +205,8 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 85vh;
-  max-height: 85vh;
+  height: 83vh;
+  max-height: 83vh;
   min-width: 100vw;
   width: 0vw;
   padding-left: 20vw;
@@ -323,14 +313,14 @@ main {
 
 /* About Page */
 .about-wrapper {
-  background-color: #f5a623;
   display: flex;
   flex: 1;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  height: 85vh;
+  height: 83vh;
   width: 100%;
+  z-index: 100;
 }
 
 .author-image {
@@ -341,24 +331,36 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 2em;
+  font-size: 1vw;
   padding: 25px;
-  height: 80vh;
+  height: 40vh;
+  max-height: 40vh;
+  background: rgb(245, 166, 35);
+  background: radial-gradient(
+    circle,
+    rgba(245, 166, 35, 1) 0%,
+    rgba(130, 91, 38, 1) 69%,
+    rgba(59, 47, 29, 1) 100%
+  );
 }
 
 .author-bio p {
+  color: #fff;
   margin: 1em 0;
+  font-family: 'Urbanist', sans-serif;
 }
 
 footer {
   background-color: #2b2c28;
-  padding: 20px 0;
   position: sticky;
   bottom: 0;
   z-index: 1;
-  height: 5vh;
+  height: 7vh;
   border: solid #61645a;
   border-width: 2px 0 0 0;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
 }
 
 .navbar-footer {
@@ -397,7 +399,7 @@ body {
   z-index: 1;
 }
 .fogwrapper {
-  height: 100%;
+  height: 85vh;
   position: absolute;
   top: 0;
   width: 100%;
@@ -407,7 +409,7 @@ body {
 #foglayer_01,
 #foglayer_02,
 #foglayer_03 {
-  height: 100%;
+  height: 85vh;
   position: absolute;
   width: 200%;
 }
@@ -418,7 +420,7 @@ body {
 #foglayer_03 .image01,
 #foglayer_03 .image02 {
   float: left;
-  height: 100%;
+  height: 85vh;
   width: 50%;
 }
 #foglayer_01 {
@@ -764,9 +766,11 @@ body {
   .navbar {
     display: none;
   }
+
   footer {
     height: 15vh;
   }
+
   .nav-wrapper-footer {
     display: flex;
   }
@@ -829,6 +833,9 @@ body {
     -webkit-transition-property: all;
     -webkit-transition-duration: 0.3s;
     -webkit-transition-timing-function: ease;
+    position: relative;
+    top: 0vh;
+    right: 0vw;
   }
 
   .home-p {
@@ -849,6 +856,9 @@ body {
       rgba(39, 93, 156, 1) 0%,
       rgb(17, 30, 76) 84%
     );
+    position: relative;
+    top: 0vh;
+    left: 0vw;
   }
 
   .stripe {
@@ -896,13 +906,16 @@ body {
   }
 
   .about-wrapper {
-    background-color: #f5a623;
+    background-image: url('./assets/mobile-bg.png');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 120vh;
+    height: 123vh;
+    z-index: 0;
   }
 
   .author-image {
@@ -916,10 +929,11 @@ body {
     font-size: 1.2em;
     padding: 25px;
     height: 80vh;
+    max-height: 83vh;
   }
 
   .author-bio p {
     margin: 1em 0;
-    height: 100vh;
+    height: 83vh;
   }
 }
