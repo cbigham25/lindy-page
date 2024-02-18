@@ -5,7 +5,7 @@ import tw_icon from './assets/twitter logo_icon.png'
 
 function Socials() {
   return (
-    <>
+    <div className="social-wrapper">
       <li>
         <a
           href="https://www.facebook.com/profile.php?id=100090504374481"
@@ -33,7 +33,7 @@ function Socials() {
           <img src={tw_icon} alt="Twitter icon" />
         </a>
       </li>
-    </>
+    </div>
   )
 }
 

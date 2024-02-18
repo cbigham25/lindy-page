@@ -13,6 +13,7 @@ import About from './About'
 import Home from './Home.tsx'
 import Books from './Books.tsx'
 import Socials from './Social.js'
+import PrivacyPolicy from './policy.js'
 
 const IMAGES = [book1, book2, book3]
 
@@ -51,6 +52,7 @@ function Main() {
             <Route exact path="/" element={<Home imageUrl={book1_render} />} />
             <Route path="/books" element={<Books imageUrls={IMAGES} />} />
             <Route path="/about" element={<About />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </main>
         <footer>
@@ -72,6 +74,9 @@ function Main() {
             </li>
           </ul>
           <ul className={`social-nav-footer`}>
+            <NavLink className={'link policy'} to="/privacy-policy">
+              Privacy Policy
+            </NavLink>
             <Socials />
           </ul>
         </footer>

@@ -130,7 +130,7 @@ main {
 .content-container-home {
   display: flex;
   flex: 1;
-  height: 80vh;
+  height: 85vh;
   width: 100%;
   flex-direction: row;
   align-items: center;
@@ -215,8 +215,8 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 80vh;
-  max-height: 80vh;
+  height: 85vh;
+  max-height: 85vh;
   min-width: 100vw;
   width: 0vw;
   padding-left: 20vw;
@@ -329,7 +329,7 @@ main {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  height: 80vh;
+  height: 85vh;
   width: 100%;
 }
 
@@ -356,7 +356,7 @@ footer {
   position: sticky;
   bottom: 0;
   z-index: 1;
-  height: 10vh;
+  height: 5vh;
   border: solid #61645a;
   border-width: 2px 0 0 0;
 }
@@ -367,14 +367,13 @@ footer {
 
 .social-nav-footer {
   display: flex;
-  justify-content: flex-end;
-  padding: 2vh;
+  justify-content: space-between;
 }
 
 .social-nav-footer li {
   opacity: 0.4;
   display: inline-flex;
-  padding: 1vh;
+  padding-right: 2vw;
 }
 .social-nav-footer li img {
   width: 32px;
@@ -724,6 +723,28 @@ body {
   }
 }
 
+.privacy-policy {
+  padding: 20px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.privacy-policy h1,
+.privacy-policy h2 {
+  margin-top: 20px;
+}
+
+.privacy-policy p {
+  margin-bottom: 10px;
+}
+
+.policy {
+  display: flex;
+  align-items: center;
+  opacity: 0.4;
+  padding-left: 2vw;
+}
+
 @media only screen and (max-width: 600px) {
   .fog {
     display: none;
@@ -755,6 +776,14 @@ body {
     justify-content: space-around;
   }
 
+  .social-nav-footer {
+    padding-top: 2vh;
+  }
+
+  .social-wrapper li {
+    margin: 1vw;
+  }
+
   ul.navbar-footer li {
     display: inline-flex;
     width: 20vw;
@@ -779,14 +808,17 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0px;
-    z-index: 3;
+    z-index: 1;
     position: sticky;
+    background-image: url('./assets/mobile-bg.png');
+    background-size: cover;
+    background-position: center;
   }
 
   .content-container-home img {
     display: flex;
     height: 50vh;
-    width: 75vw;
+    width: 65vw;
     max-height: 30vh;
     flex-shrink: 0;
     flex-grow: 0;
@@ -806,19 +838,25 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 10vh;
-
     height: 20vh;
     width: 100vw;
     font-size: 2em;
     line-height: 1.5em;
     padding: 0 50px;
+    z-index: 4;
+    background: radial-gradient(
+      ellipse at left center,
+      rgba(39, 93, 156, 1) 0%,
+      rgb(17, 30, 76) 84%
+    );
   }
 
   .stripe {
-    height: 20vh;
-    position: absolute;
-    z-index: 2;
-    top: 25vh;
+    display: none;
+  }
+
+  .preorder {
+    padding-top: 2vh;
   }
 
   .book-wrapper {
@@ -828,7 +866,7 @@ body {
   .book-container {
     flex-direction: column;
     opacity: 1;
-    max-height: 170vh;
+    max-height: 185vh;
     height: auto;
   }
   .book-container img {
