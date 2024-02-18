@@ -8,6 +8,13 @@ export function Home({ imageUrl }) {
         <div className="home-p">
           <p>The Intention Series:</p>
           <p>Book 1</p>
+          <a
+            href="https://www.amazon.com/dp/B0CVS4M1BZ/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p className="preorder">Pre-order Now!</p>
+          </a>
         </div>
         <Link to="/books">
           <img src={imageUrl} alt="3D render of book" />

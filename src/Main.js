@@ -22,17 +22,23 @@ function Main() {
       <>
         <header>
           <h1>
-            <NavLink to="/">M. J. Lindemann</NavLink>
+            <NavLink className={'link'} to="/">
+              M. J. Lindemann
+            </NavLink>
           </h1>
 
           {/* Navigation Menu */}
           <div className={`nav-wrapper`} style={{ zIndex: 1000 }}>
             <ul className={`navbar`}>
               <li>
-                <NavLink to="/books">Books</NavLink>
+                <NavLink className={'link'} to="/books">
+                  Books
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/about">About</NavLink>
+                <NavLink className={'link'} to="/about">
+                  About
+                </NavLink>
               </li>
               <li>
                 <a href="https://mjlindemann.blogspot.com/">Blog</a>
@@ -50,13 +56,19 @@ function Main() {
         <footer>
           <ul className={`navbar-footer`}>
             <li>
-              <NavLink to="/books">Books</NavLink>
+              <NavLink className={'link'} to="/books">
+                Books
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/about">About</NavLink>
+              <NavLink className={'link'} to="/about">
+                About
+              </NavLink>
             </li>
             <li>
-              <a href="https://mjlindemann.blogspot.com/">Blog</a>
+              <a className={'link'} href="https://mjlindemann.blogspot.com/">
+                Blog
+              </a>
             </li>
           </ul>
           <ul className={`social-nav-footer`}>
