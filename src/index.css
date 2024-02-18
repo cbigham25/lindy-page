@@ -822,7 +822,7 @@ body {
   .content-container-home img {
     display: flex;
     height: 50vh;
-    width: 65vw;
+    width: 50vw;
     max-height: 30vh;
     flex-shrink: 0;
     flex-grow: 0;
@@ -835,7 +835,7 @@ body {
     -webkit-transition-timing-function: ease;
     position: relative;
     top: 0vh;
-    right: 0vw;
+    right: 5vw;
   }
 
   .home-p {
