@@ -34,7 +34,7 @@ const Book1 = ({ imageUrl }) => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <p className="preorder">Pre-order Now!</p>
+        <p className="preorder">Out Now!</p>
       </a>
     </div>
   </div>
