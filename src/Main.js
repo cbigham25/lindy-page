@@ -14,7 +14,7 @@ import Home from './Home.tsx'
 import Books from './Books.tsx'
 import Socials from './Social.js'
 import PrivacyPolicy from './policy.js'
-import Subscribe from './Subscribe.js'
+// import Subscribe from './Subscribe.js'
 
 const IMAGES = [book1, book2, book3]
 
@@ -37,11 +37,11 @@ function Main() {
                   Books
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink className={'link'} to="/subscribe">
                   Subscribe
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink className={'link'} to="/about">
                   About
@@ -57,7 +57,7 @@ function Main() {
           <Routes>
             <Route exact path="/" element={<Home imageUrl={book1_render} />} />
             <Route path="/books" element={<Books imageUrls={IMAGES} />} />
-            <Route path="/subscribe" element={<Subscribe />} />
+            {/* <Route path="/subscribe" element={<Subscribe />} /> */}
             <Route path="/about" element={<About />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
@@ -69,11 +69,11 @@ function Main() {
                 Books
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink className={'link'} to="/subscribe">
                 Subscribe
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink className={'link'} to="/about">
                 About
