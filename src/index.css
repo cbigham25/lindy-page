@@ -126,20 +126,27 @@ main {
   z-index: 3;
 }
 
+.content-container-home .img-wrapper {
+  position: absolute;
+  top: 45%; /* Adjust as needed */
+  left: 65%; /* Adjust as needed */
+  transform: translate(-50%, -50%);
+}
+
 .content-container-home img {
-  display: flex;
-  height: 70vh;
+  display: block;
   max-height: 60vh;
-  flex-shrink: 0;
-  flex-grow: 0;
+  max-width: 35vw;
+  height: auto;
+  width: auto;
+  flex-shrink: 1;
+  flex-grow: 1;
   padding-left: 5vw;
   cursor: pointer;
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.3s;
   -webkit-transition-timing-function: ease;
-  position: absolute;
-  top: 17vh;
-  right: 15vw;
+  object-fit: contain;
 }
 
 .content-container-home img:hover {
@@ -154,7 +161,7 @@ main {
   align-items: center;
   height: 40vh;
   width: 40vw;
-  font-size: 4em;
+  font-size: 3vw;
   line-height: 1.5em;
   padding: 0 50px;
   top: 25vh;
@@ -819,23 +826,26 @@ body {
     background-position: center;
   }
 
-  .content-container-home img {
-    display: flex;
+  .content-container-home .img-wrapper {
+    position: relative; /* Change to relative for media query */
+    top: 0;
+    left: 21vw;
+    transform: none; /* Remove the translate transformation */
     height: 50vh;
-    width: 50vw;
-    max-height: 30vh;
-    flex-shrink: 0;
-    flex-grow: 0;
-    padding-left: 0vw;
-    margin-top: 5vh;
-    margin-left: 25vw;
+    width: 100vw;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+  }
+
+  .content-container-home img {
+    max-width: fit-content;
+    max-height: fit-content;
+    height: 100%;
+    width: 100%;
+    padding-left: 0;
     cursor: pointer;
-    -webkit-transition-property: all;
-    -webkit-transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease;
-    position: relative;
-    top: 0vh;
-    right: 5vw;
+    top: 0;
+    object-fit: fill;
   }
 
   .home-p {
@@ -845,9 +855,9 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 10vh;
-    height: 20vh;
+    height: 100vh;
     width: 100vw;
-    font-size: 2em;
+    font-size: 4vw;
     line-height: 1.5em;
     padding: 0 50px;
     z-index: 4;

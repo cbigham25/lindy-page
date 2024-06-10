@@ -17,7 +17,9 @@ export function Home({ imageUrl }) {
           </a>
         </div>
         <Link to="/books">
-          <img src={imageUrl} alt="3D render of book" />
+          <div className="img-wrapper">
+            <img src={imageUrl} alt="3D render of book" />
+          </div>
         </Link>
       </div>
       <div className="stripe"></div>
