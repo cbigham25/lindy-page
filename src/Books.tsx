@@ -44,8 +44,37 @@ const Book2 = ({ imageUrl }) => (
   <div className="book-container" id="book-2">
     <img src={imageUrl} alt="Book cover 2" />
     <div className="desc-container">
-      {/* Book 2 Description HTML here */}
-      <p>Patience is rewarded...</p>
+      <h1>"Egal has fallen!"</h1>
+      <p>
+        After a brutal coup, Prolivgrad rests in the grip of a merciless
+        dictator, leaving dissenters to face certain death.
+      </p>
+
+      <p>
+        Sharon struggles with her part in bringing chaos to the city until a
+        chance rescue leads her to join a fledgling resistance.
+      </p>
+
+      <p>
+        Meanwhile, newly liberated Troy must choose between aiding a tyrant or
+        risking all to oppose him.
+      </p>
+
+      <p>
+        Across the continent, Ren and Seffin embark on a mission to prepare for
+        an epic showdown against an undead threat, guarding a child destined for
+        sacrifice.
+      </p>
+
+      <p> A mystic with immense potential and little control.</p>
+
+      <a
+        href="https://www.amazon.com/dp/B0D5FGGP8V/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p className="preorder">Pre-order now!</p>
+      </a>
     </div>
   </div>
 )

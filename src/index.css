@@ -231,7 +231,7 @@ main {
 #book-2 {
   background: radial-gradient(
     ellipse at left center,
-    rgb(127, 22, 95) 0%,
+    rgb(109, 10, 10) 0%,
     rgb(35, 9, 47) 84%
   );
 }
