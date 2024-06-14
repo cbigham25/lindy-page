@@ -812,7 +812,7 @@ body {
   }
 
   footer {
-    height: 15vh;
+    height: 12vh;
   }
 
   .nav-wrapper-footer {
@@ -849,7 +849,8 @@ body {
 
   .home-content-wrapper {
     width: 100vw;
-    height: 30vh;
+    height: 35vh;
+    overflow: hidden;
   }
 
   .home-p {
@@ -859,11 +860,12 @@ body {
   }
 
   .content-container-home {
-    height: 80vh;
+    height: 75vh;
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 5vw;
+    overflow: hidden;
     background: radial-gradient(
         circle at 20% 20%,
         rgba(105, 105, 105, 0.5) 10%,
