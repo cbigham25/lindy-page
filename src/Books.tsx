@@ -91,19 +91,30 @@ const Book3 = ({ imageUrl }) => (
 )
 
 export function Books({ imageUrls }) {
-  // Get query parameter
   const { search } = useLocation()
   const params = new URLSearchParams(search)
   const bookIndex = parseInt(params.get('book'), 10)
 
-  // Array of book components
   const bookComponents = [
     <Book1 imageUrl={imageUrls[0]} />,
     <Book2 imageUrl={imageUrls[1]} />,
     <Book3 imageUrl={imageUrls[2]} />,
   ]
-  const [currentBook, setCurrentBook] = useState(bookIndex || 0)
+  const [currentBook, setCurrentBook] = useState(0) // Always start with Book 1
   const totalBooks = bookComponents.length
+
+  useEffect(() => {
+    const scrollToBook = sessionStorage.getItem('scrollToBook')
+    if (scrollToBook !== null) {
+      const bookElement = document.getElementById(
+        `book-${parseInt(scrollToBook) + 1}`
+      )
+      if (bookElement) {
+        bookElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+      sessionStorage.removeItem('scrollToBook') // Clean up after scrolling
+    }
+  }, [])
 
   useEffect(() => {
     if (bookIndex >= 0 && bookIndex < totalBooks) {

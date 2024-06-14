@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export function Home({ imageUrl, secondImageUrl }) {
   const navigate = useNavigate()
 
-  const navigateToBook = (bookIndex) => {
-    navigate(`/books?book=${bookIndex}`)
+  const navigateToBook = (bookId) => {
+    sessionStorage.setItem('scrollToBook', bookId)
+    navigate('/books')
   }
 
   return (
