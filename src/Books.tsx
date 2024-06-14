@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Book1 = ({ imageUrl }) => (
   <div className="book-container" id="book-1">
@@ -90,14 +91,25 @@ const Book3 = ({ imageUrl }) => (
 )
 
 export function Books({ imageUrls }) {
+  // Get query parameter
+  const { search } = useLocation()
+  const params = new URLSearchParams(search)
+  const bookIndex = parseInt(params.get('book'), 10)
+
   // Array of book components
   const bookComponents = [
     <Book1 imageUrl={imageUrls[0]} />,
     <Book2 imageUrl={imageUrls[1]} />,
     <Book3 imageUrl={imageUrls[2]} />,
   ]
-  const [currentBook, setCurrentBook] = useState(0)
+  const [currentBook, setCurrentBook] = useState(bookIndex || 0)
   const totalBooks = bookComponents.length
+
+  useEffect(() => {
+    if (bookIndex >= 0 && bookIndex < totalBooks) {
+      setCurrentBook(bookIndex)
+    }
+  }, [bookIndex, totalBooks])
 
   const goToNextBook = () => {
     setCurrentBook((current) => (current + 1) % totalBooks)
@@ -106,11 +118,6 @@ export function Books({ imageUrls }) {
   const goToPreviousBook = () => {
     setCurrentBook((current) => (current - 1 + totalBooks) % totalBooks)
   }
-
-  // const wrapperStyle = {
-  //   transform: `translateX(-${currentBook * 100}vw)`,
-  //   transition: 'transform 1s ease',
-  // }
 
   return (
     <div className="slider-container">

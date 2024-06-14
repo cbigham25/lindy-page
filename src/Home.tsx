@@ -1,7 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export function Home({ imageUrl, secondImageUrl }) {
+  const navigate = useNavigate()
+
+  const navigateToBook = (bookIndex) => {
+    navigate(`/books?book=${bookIndex}`)
+  }
+
   return (
     <>
       <div className="content-container-home">
@@ -17,11 +23,9 @@ export function Home({ imageUrl, secondImageUrl }) {
               <p className="preorder">Out Now!</p>
             </a>
           </div>
-          <Link to="/books">
-            <div className="img-wrapper">
-              <img src={imageUrl} alt="3D render of book" />
-            </div>
-          </Link>
+          <div className="img-wrapper" onClick={() => navigateToBook(0)}>
+            <img src={imageUrl} alt="3D render of book" />
+          </div>
         </div>
         <div className="background-gradient-1"></div>
         <div className="home-content-wrapper">
@@ -36,11 +40,9 @@ export function Home({ imageUrl, secondImageUrl }) {
               <p className="preorder">pre-order</p>
             </a>
           </div>
-          <Link to="/books">
-            <div className="img-wrapper">
-              <img src={secondImageUrl} alt="3D render of book 2" />
-            </div>
-          </Link>
+          <div className="img-wrapper" onClick={() => navigateToBook(1)}>
+            <img src={secondImageUrl} alt="3D render of book 2" />
+          </div>
         </div>
         <div className="background-gradient-2"></div>
       </div>
