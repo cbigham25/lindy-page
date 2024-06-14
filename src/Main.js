@@ -6,6 +6,7 @@ import {
   Routes,
 } from 'react-router-dom'
 import book1_render from './assets/Ebook_TheWilloftheWorld_3DMockup.png'
+import book2_render from './assets/book-2-render.png'
 import book1 from './assets/placeholder-1.jpg'
 import book2 from './assets/placeholder-2.jpg'
 import book3 from './assets/placeholder-3.jpg'
@@ -60,7 +61,13 @@ function Main() {
         </header>
         <main>
           <Routes>
-            <Route exact path="/" element={<Home imageUrl={book1_render} />} />
+            <Route
+              exact
+              path="/"
+              element={
+                <Home imageUrl={book1_render} secondImageUrl={book2_render} />
+              }
+            />
             <Route path="/books" element={<Books imageUrls={IMAGES} />} />
             <Route path="/subscribe" element={<Subscribe />} />
             <Route path="/about" element={<About />} />

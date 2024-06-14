@@ -115,6 +115,7 @@ main {
 }
 
 /* Home Page */
+
 .content-container-home {
   display: flex;
   flex: 1;
@@ -122,15 +123,28 @@ main {
   width: 100%;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   z-index: 3;
 }
 
+.home-content-wrapper {
+  height: 83vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  z-index: 2;
+}
+
 .content-container-home .img-wrapper {
-  position: absolute;
-  top: 45%; /* Adjust as needed */
-  left: 65%; /* Adjust as needed */
-  transform: translate(-50%, -50%);
+  position: relative; /* Ensure the img-wrapper doesn't take absolute positioning */
+  top: 0;
+  left: 0;
+  transform: none;
 }
 
 .content-container-home img {
@@ -141,7 +155,6 @@ main {
   width: auto;
   flex-shrink: 1;
   flex-grow: 1;
-  padding-left: 5vw;
   cursor: pointer;
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.3s;
@@ -159,14 +172,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 40vh;
-  width: 40vw;
-  font-size: 3vw;
+  height: 20vh;
+  width: 20vw;
+  font-size: 2vw;
   line-height: 1.5em;
-  padding: 0 50px;
-  top: 25vh;
-  left: 15vw;
-  position: absolute;
+  position: relative;
 }
 
 .home-p p {
@@ -189,6 +199,33 @@ main {
   position: absolute;
   z-index: 2;
   top: 25vh;
+}
+
+.background-gradient-1 {
+  display: block;
+  width: 100vw;
+  height: 30vh;
+  position: absolute;
+  z-index: 0;
+  background: radial-gradient(
+    ellipse at left center,
+    rgba(39, 93, 156, 1) 0%,
+    rgb(17, 30, 76) 84%
+  );
+}
+
+.background-gradient-2 {
+  display: block;
+  width: 100vw;
+  height: 30vh;
+  position: absolute;
+  z-index: 0;
+
+  background: radial-gradient(
+    ellipse at right center,
+    rgba(93, 39, 156, 1) 0%,
+    rgb(76, 30, 17) 84%
+  );
 }
 
 /* Books Page */
@@ -810,73 +847,61 @@ body {
 
   /* Home Page */
 
-  .content-container-home {
-    display: flex;
-    flex: 1;
-    height: 75vh;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
-    z-index: 1;
-    position: sticky;
-    background-image: url('./assets/mobile-bg.png');
-    background-size: cover;
-    background-position: center;
-  }
-
-  .content-container-home .img-wrapper {
-    position: relative; /* Change to relative for media query */
-    top: 0;
-    left: 21vw;
-    transform: none; /* Remove the translate transformation */
-    height: 50vh;
+  .home-content-wrapper {
     width: 100vw;
-    padding-top: 5vh;
-    padding-bottom: 3vh;
-  }
-
-  .content-container-home img {
-    max-width: fit-content;
-    max-height: fit-content;
-    height: 100%;
-    width: 100%;
-    padding-left: 0;
-    cursor: pointer;
-    top: 0;
-    object-fit: fill;
+    height: 30vh;
   }
 
   .home-p {
-    color: #fff;
-    display: flex;
+    width: 50vw;
+    font-size: 5vw;
+    margin-right: 5vw;
+  }
+
+  .content-container-home {
+    height: 80vh;
+    width: 100%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10vh;
-    height: 100vh;
-    width: 100vw;
-    font-size: 4vw;
-    line-height: 1.5em;
-    padding: 0 50px;
-    z-index: 4;
+    justify-content: flex-start;
+    margin-top: 5vw;
     background: radial-gradient(
-      ellipse at left center,
-      rgba(39, 93, 156, 1) 0%,
-      rgb(17, 30, 76) 84%
-    );
-    position: relative;
-    top: 0vh;
-    left: 0vw;
+        circle at 20% 20%,
+        rgba(105, 105, 105, 0.5) 10%,
+        transparent 30%
+      ),
+      radial-gradient(
+        circle at 80% 30%,
+        rgba(105, 105, 105, 0.5) 10%,
+        transparent 30%
+      ),
+      radial-gradient(
+        circle at 50% 70%,
+        rgba(105, 105, 105, 0.5) 15%,
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 30% 80%,
+        rgba(105, 105, 105, 0.5) 20%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 70% 60%,
+        rgba(105, 105, 105, 0.5) 10%,
+        transparent 40%
+      ),
+      #000000; /* Black background */
   }
 
-  .stripe {
-    display: none;
+  .background-gradient-1 {
+    width: 100vw;
+    height: 20vh;
+    top: 22.5vh;
   }
 
-  .preorder {
-    padding-top: 2vh;
+  .background-gradient-2 {
+    width: 100vw;
+    height: 20vh;
+    bottom: 18vh;
   }
 
   .book-wrapper {
