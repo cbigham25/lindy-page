@@ -38,7 +38,7 @@ export function Home({ imageUrl, secondImageUrl }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <p className="preorder">pre-order</p>
+              <p className="preorder">Out Now!</p>
             </a>
           </div>
           <div className="img-wrapper" onClick={() => navigateToBook(1)}>
