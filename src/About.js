@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import lindyPic from './assets/lindy-bio.png'
-import { CSSTransition } from 'react-transition-group'
 
 class About extends Component {
   render() {
     return (
       <>
         <div className="about-wrapper">
-          <img src={lindyPic} alt="Image of author" className="author-image" />
+          <img src={lindyPic} alt="author" className="author-image" />
 
           <div className="author-bio">
             <p>
