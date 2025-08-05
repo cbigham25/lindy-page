@@ -41,6 +41,7 @@ function Main() {
                 <a
                   href="https://dashboard.mailerlite.com/forms/452769/107643299860317814/share"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Newsletter
                 </a>
@@ -51,7 +52,7 @@ function Main() {
                 </NavLink>
               </li>
               <li>
-                <a href="https://mjlindemann.blogspot.com/" target="_blank">
+                <a href="https://mjlindemann.blogspot.com/" target="_blank" rel="noreferrer">
                   Blog
                 </a>
               </li>
@@ -84,6 +85,7 @@ function Main() {
               <a
                 href="https://dashboard.mailerlite.com/forms/452769/107643299860317814/share"
                 target="_blank"
+                rel="noreferrer"
               >
                 Newsletter
               </a>
@@ -98,6 +100,7 @@ function Main() {
                 className={'link'}
                 href="https://mjlindemann.blogspot.com/"
                 target="_blank"
+                rel="noreferrer"
               >
                 Blog
               </a>
